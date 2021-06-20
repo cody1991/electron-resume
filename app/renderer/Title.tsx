@@ -1,4 +1,5 @@
 import React from 'react';
+import lessStyle from './index.less';
 interface IProps {
   /**
    * @description 标题
@@ -14,5 +15,9 @@ interface IProps {
 }
 
 export default function Title({ text, styles }: IProps) {
-  return <div style={styles}>{text}</div>;
+  return (
+    <div style={styles} className={lessStyle.title}>
+      {text}
+    </div>
+  );
 }
